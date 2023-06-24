@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐欣赏</title>
+    <!-- 导入字体 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/player.css">
+ 
+</head>
+
+<body>
+    <div class="shell">
+        <div class="cover">
+            <img src="img/power.jpg" alt="">
+        </div>
+        <div class="info">
+            <div class="title">Power</div>
+            <div class="singer">未知歌手</div>
+        </div>
+        <div class="volume-box">
+            <span class="volume-down"><i class="material-icons">remove</i></span>
+            <input type="range" class="volume-range" step="1" value="80" min="0" max="100"
+                oninput="music.volume = this.value/100">
+            <span class="volume-up"><i class="material-icons">add</i></span>
+        </div>
+        <div class="btn-box">
+            <i class="material-icons repeat" onclick="handleRepeat()">repeat</i>
+            <span class="play" onclick="handlePlay()">
+                <i class="material-icons">pause</i>
+            </span>
+            <i class="material-icons volume" onclick="handleVolume()">volume_up</i>
+        </div>
+        <div class="music-box">
+            <input type="range" class="seekbar" step="1" value="0" min="0" max="100" oninput="handleSeekBar()">
+            <audio class="music-element" autoplay>
+                <source  src="music/power.mp3">
+            </audio>
+            <span class="current-time">0:0</span><span class="duration">0:0</span>
+           
+        </div>
+    </div> 
+  <div class="music-list"><p style="font-size:20px;color:white;"><b>音乐列表</b><br><br>
+      <a class="music" href="dream it possible.html">1.Dream It Possible</a><br>
+ <br>   <a class="music" href="empty love.html" >2.Empty love</a><br>
+  <br> <br><a class="music" href="everytime we touch.html">3.Everytime We Touch</a>
+   <br> <br><a class="music" href="fractures.html">4.Fractures</a>
+     <br> <br><a class="music" href="good time.html">5.Good Time</a>
+       <br> <br><a class="music" href="lose control.html">6.Lose Control</a>
+         <br> <br><a class="music" href="normal no more.html">7.Normal No More</a>
+           <br> <br><a class="music" href="one last time.html">8.One Last Time</a>
+           <br> <br><a class="music" href="Power.html" style="color:orange">9.Power</a>
+           <br> <br><a class="music" href="salt.html">10.Salt</a>
+           <br> <br><a class="music" href="sold out.html">11.Sold Out</a>
+           <br> <br><a class="music" href="stay.html">12.Stay</a>
+           <br> <br><a class="music" href="summer cozy.html">13.Summer Cozy</a>
+           <br> <br><a class="music" href="take me hand.html">14.Take Me Hand</a>
+           <br> <br><a class="music" href="The Ocean.html">15.The Ocean</a>
+           <br> <br><a class="music" href="Tired.html">16.Tired</a>
+           <br> <br><a class="music" href="waiting for love.html">17.Waiting For Love</a>
+           <br> <br><a class="music" href="Wake.html">18.Wake</a>
+            <br> <br><a class="music" href="Wolves.html">19.Wolves</a>
+            
+  </p></div>
+
+<script src="js/player.js"></script>
+
+</body>
+
+</html>
